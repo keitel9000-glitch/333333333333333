@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8">
+<script>
+  const p = location.pathname.split('/').filter(Boolean);
+  const base = p.length? '/' + p[0] : '';
+  const rest = location.pathname.slice(base.length);
+  location.replace(base + '/#' + rest + location.search + location.hash);
+</script>
